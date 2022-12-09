@@ -14,8 +14,16 @@
 
 int main(void)
 {
-	// Here the function prints out the string
-
+/*
+ *
+ *  * main - Entry point
+ *
+ *   *
+ *
+ *    * Return: Always 0 (Success)
+ *
+ *
+ */
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
