@@ -13,8 +13,9 @@
  */
 
 int main(void)
-/* prints out */
 {
+	// Here the function prints out the string
+
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
