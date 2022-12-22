@@ -1,4 +1,4 @@
-#include "mainn.h"
+#include "main.h"
 /**
  * cap_string - capitalize all words of string
  * Return: void
