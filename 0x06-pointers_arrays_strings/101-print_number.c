@@ -1,27 +1,50 @@
 #include "main.h"
 
 /**
- * print_number - Print the given int one digit at a time
- * @n: The integer to print
+ * print_number - print integer
+ * Return: void
+ * @n: number
  */
 void print_number(int n)
 {
-	unsigned int u, i;
+	unsigned int size = n;
+
+	int digits = 0;
+
+	int i;
 
 	if (n < 0)
+		size = -n;
+	if (n == 0)
+		digits = 1;
+
+	while (size >= 1)
 	{
-		u = -n;
-		_putchar('-');
-	}
-	else
-	{
-		u = n;
+		size = size / 10;
+		digits++;
 	}
 
-	i = 1000000000;
-	do {
-		if (i <= u || i == 1)
-			_putchar(u / i % 10 + '0');
-		i /= 10;
-	} while (i != 0);
+	for (i = 0; i < digits; i++)
+	{
+
+		int pow = 1;
+
+		int j;
+
+		int d;
+
+		for (j = 0; j < digits - i - 1; j++)
+		{
+			pow = pow * 10;
+		}
+
+		d = ((n / pow) % 10);
+		if (n < 0)
+		{
+			d = -d;
+			if (i == 0)
+				_putchar(45);
+		}
+		_putchar(48 + d);
+	}
 }
