@@ -1,11 +1,14 @@
-#include<stdio.h>
-/*
- * a program that prints its name, 
- * followed by a new line.
- */
+#include <stdio.h>
 
+/**
+ * main -  writes its name
+ * @argc: arguement count
+ * @argv: array of pointers to arguement strings
+ * Return: 0
+ **/
 int main(int argc, char *argv[])
-{ 	printf("Print program name: %s \n", argv[0]);
-	return 0;
-
+{
+	//argc = argc;
+	printf("%s\n", argv[0]);
+	return (0);
 }
