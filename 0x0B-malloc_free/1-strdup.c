@@ -1,39 +1,52 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
+
 /**
- * _strdup - Main Entry
- * @str: input
- * Return: 0
+ * _strlen - return length of a string
+ *
+ * @s: char type
+ * Return:  length of string
  */
+int _strlen(char *s)
+{
+	int a;
+
+	for (a = 0; s[a] != '\0'; a++)
+	{
+
+	}
+	return (a);
+}
+
+/**
+ * *_strdup - function to return pointer to string
+ * @str: pointer to string array input
+ * Return: pointer to string created
+ */
+
 char *_strdup(char *str)
 {
-	char *nstr;
-	unsigned int len, i;
+	char *ptr;
+	int size;
+	int x;
 
-	/* check is str is null */
 	if (str == NULL)
 	{
 		return (NULL);
 	}
+	size = _strlen(str) + 1;
+	ptr = malloc(size * sizeof(char));
 
-	len = 0;
-	while (str[len] != '\0')
+	x = 0;
+	while (x < size)
 	{
-		len++;
+		if (ptr == NULL)
+		{
+			return (NULL);
 	}
-
-	nstr = malloc(sizeof(char) * (len + 1));
-
-	/*check if malloc was successful*/
-	if (nstr == NULL)
-	{
-		return (NULL);
+		ptr[x] = str[x];
+		x++;
 	}
-
-	for (i = 0; i < len; i++)
-	{
-		nstr[i] = str[i];
-	}
-	nstr[len] = '\0';
-	return (nstr);
+	return (ptr);
 }
