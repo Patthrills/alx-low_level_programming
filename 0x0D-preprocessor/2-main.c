@@ -1,3 +1,8 @@
+/*
+ * File: 2-main.c
+ * Auth: Gedeon Obae Gekonge
+ */
+
 #include <stdio.h>
 
 /**

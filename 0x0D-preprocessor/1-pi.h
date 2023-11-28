@@ -3,6 +3,7 @@
 
 /*
  * File: 1-pi.h
+ * Auth: Gedeon Obae Gekonge
  * Desc: Header file that defines a macro named PI
  *       as an abbreviation for the token 3.14159265359.
  */
